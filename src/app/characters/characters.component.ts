@@ -9,7 +9,7 @@ import { CharacterService } from '../character-service/character.service';
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
-title = 'Rick and Morty Application'
+
 characters : Character[]
   constructor( public characterService: CharacterService) {
     this.characters = characterService.getCharacters()

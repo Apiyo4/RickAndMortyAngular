@@ -3,3 +3,4 @@ npm install --save  bootstrap popper
 inside styles.css :  @import "~bootstrap/dist/css/bootstrap.css"
 ng generate service character-service/character
 ng generate module app-routing --flat --module=app
+inside app.html put <router-outlet></router-outlet>
