@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../character';
+// import { Character } from '../character';
+import { CharacterService } from '../character-service/character.service';
 
 @Component({
   selector: 'app-characters',
@@ -8,12 +10,10 @@ import { Character } from '../character';
 })
 export class CharactersComponent implements OnInit {
 title = 'Rick and Morty Application'
-  characters : Character[] = [
-    new Character("Rick Sanchez", "https://rickandmortyapi.com/api/character/avatar/1.jpeg", "Male","Human", "Alive"),
-    new Character("Morty Smith", "https://rickandmortyapi.com/api/character/avatar/2.jpeg", "Male","Human", "Alive" )
-
-  ]
-  constructor() { }
+characters : Character[]
+  constructor( public characterService: CharacterService) {
+    this.characters = characterService.getCharacters()
+   }
 
   ngOnInit() {
   }
