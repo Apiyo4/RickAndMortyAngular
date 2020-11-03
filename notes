@@ -1,0 +1,3 @@
+Generate component characters
+npm install --save  bootstrap popper
+inside styles.css :  @import "~bootstrap/dist/css/bootstrap.css"
