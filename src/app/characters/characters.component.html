@@ -4,6 +4,7 @@
         <div class='col-md pt-10' *ngFor='let character of characters'>
             <img src={{character.image}} alt={{character.name}}  />
             <h3 class='pt-10'>{{character.name}}</h3>
+            <app-character-details></app-character-details>
             <button class='btn btn-outline-success'>See details</button>
     </div>
     </div>
